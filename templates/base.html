@@ -1,0 +1,39 @@
+<!-- templates/base.html -->
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Wiki Game{% endblock %}</title>
+    <!-- Google FontsのRoboto Slabをインポート -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+</html>
+
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <a href="/" class="logo-link"><h1>Wiki Game</h1></a>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div id="content">
+        {% block content %}
+        <!-- コンテンツがここに入ります -->
+        {% endblock %}
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Wiki Game. All rights reserved.</p>
+    </footer>
+</body>
+</html>

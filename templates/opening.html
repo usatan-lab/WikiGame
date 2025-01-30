@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block title %}Wiki Game - オープニング{% endblock %}
+
+{% block content %}
+<div class="container">
+    {% if error %}
+        <p class="error">{{ error }}</p>
+    {% endif %}
+    <div class="rule-explanation">
+        <p>【ルール】</p>
+        <ul>
+            <li>ランダムなWikipediaページからスタートします。</li>
+            <li>制限クリック数内に目標記事を探してね！</li>
+            <li>クリック数がなくなるとゲームオーバーだよ！</li>
+            <li>途中でリセットボタンを押したらリセットされるよ。</li>
+        </ul>
+    </div>
+    <br>
+    <div class="button-container">
+        <!-- 簡易版: GETパラメータを付けて難易度を指定 -->
+        <button onclick="location.href='{{ url_for('start_game') }}?difficulty=easy'">Easy</button>
+        <button onclick="location.href='{{ url_for('start_game') }}?difficulty=hard'">Hard</button>
+    </div>
+</div>
+{% endblock %}

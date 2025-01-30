@@ -1,0 +1,13 @@
+<!-- templates/wiki.html -->
+{% extends "base.html" %}
+
+{% block title %}{{ page_title }} - Wiki Game{% endblock %}
+
+{% block content %}
+<div class="wiki-page">
+    <h1 class="page-title">{{ page_title }}</h1>
+    <div class="wiki-content" id="mw-content-text">
+        {{ content | safe }}
+    </div>
+</div>
+{% endblock %}

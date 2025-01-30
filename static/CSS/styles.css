@@ -1,0 +1,324 @@
+/* static/css/styles.css */
+
+/* 基本のリセット */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;     /* 基本フォントサイズ */
+    line-height: 1.6;    /* 行間 */
+    color: #333;         /* テキストカラー */
+    background-color: #f9f9f9; /* 背景色 */
+    padding-top: 60px;   /* ヘッダーの高さに合わせてボディにパディングを追加 */
+}
+
+/* ヘッダーのスタイル */
+header {
+    background-color: #f0f0f0; /* 控えめな背景色に変更 */
+    padding: 10px 0; /* パディングを上下に設定 */
+    border-bottom: 1px solid #ddd;
+    position: fixed; /* スクロール時に固定 */
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 控えめなシャドウ */
+    height: 60px; /* 高さを固定 */
+}
+
+/* ヘッダー内のコンテナのスタイル */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ロゴリンクのスタイル */
+.logo-link {
+    text-decoration: none; /* デフォルトのリンク下線を削除 */
+}
+
+.logo-link h1 {
+    font-size: 24px; /* フォントサイズを固定 */
+    color: #333;
+    font-family: 'Roboto Slab', serif; /* ロゴにもフォントを適用 */
+}
+
+/* ナビゲーションのリストスタイル */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 15px; /* リンク間のスペースを調整 */
+}
+
+/* ボタンのスタイル */
+.btn {
+    display: inline-block;
+    padding: 8px 16px;
+    font-size: 16px;
+    margin: 0;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* コンテンツ領域のスタイル */
+.container {
+    max-width: 1400px; /* ゲーム全体の幅を広げる */
+    width: 90%;         /* 幅を90%に設定 */
+    margin: 80px auto 20px auto;  /* 上マージンをヘッダーの高さに調整 */
+    padding: 20px 10px; /* 上下20px、左右10px */
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+/* 記事内容のスタイル */
+.wiki-content {
+    text-align: left;    /* 左揃え */
+    max-width: 120ch;    /* 約120文字分の幅に制限 */
+    width: 100%;         /* 幅を100%に設定 */
+    margin: 0 auto;      /* 中央揃え */
+    line-height: 1.6;    /* 行間を調整して読みやすく */
+    padding: 0 10px;     /* 横方向のパディングを追加 */
+    box-sizing: border-box; /* パディングを含めたボックスサイズに設定 */
+}
+
+/* ゲーム情報のスタイル */
+.game-info {
+    text-align: center; /* テキストを中央揃え */
+    margin-bottom: 20px; /* 下に余白を追加 */
+}
+
+.game-info p {
+    font-size: 18px; /* フォントサイズを調整 */
+    margin: 10px 0;   /* 各段落の上下に余白を追加 */
+    color: #555;      /* テキストカラーを調整 */
+}
+
+.game-info button {
+    display: inline-block;
+    padding: 8px 16px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.game-info button:hover {
+    background-color: #218838; /* ホバー時の背景色を濃くする */
+    transform: scale(1.05);    /* ホバー時に少し拡大 */
+}
+
+/* ルール説明文のスタイル */
+.rule-explanation {
+    text-align: center; /* テキストを中央揃え */
+    margin: 20px 0;     /* 上下に余白を追加 */
+    font-size: 18px;    /* フォントサイズを調整 */
+    color: #555;        /* テキストカラーを調整 */
+}
+
+.rule-explanation p {
+    max-width: 800px;    /* テキストの幅を制限 */
+    margin: 0 auto;      /* 左右のマージンを自動にして中央揃え */
+    line-height: 1.6;    /* 行間を調整して読みやすく */
+}
+
+.rule-explanation ul {
+    list-style: disc inside; /* リストマーカーを内側に配置 */
+    max-width: 800px;        /* リストの幅を制限 */
+    margin: 10px auto;       /* 上下に余白を追加し、中央揃え */
+    padding-left: 20px;      /* 左側にパディングを追加 */
+}
+
+.rule-explanation li {
+    text-align: left; /* リストアイテムを左揃え */
+    margin-bottom: 10px; /* 各アイテムの下に余白を追加 */
+}
+
+/* ゲームクリア画面のスタイル */
+.game-clear {
+    text-align: center; /* テキストとボタンを中央揃え */
+    margin-top: 20px;   /* 上に余白を追加 */
+}
+
+.game-clear p {
+    font-size: 18px;    /* フォントサイズを調整 */
+    margin-bottom: 20px; /* ボタンとの間に余白を追加 */
+    color: #555;        /* テキストカラーを調整 */
+}
+
+.game-clear button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff; /* ボタンの背景色を青に変更 */
+    color: #fff;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.game-clear button:hover {
+    background-color: #0056b3; /* ホバー時の背景色を濃くする */
+    transform: scale(1.05);    /* ホバー時に少し拡大 */
+}
+
+/* ボタンコンテナのスタイルを追加 */
+.button-container {
+    text-align: center; /* ボタンを中央揃えに */
+    margin-top: 20px;   /* 上に余白を追加 */
+    display: flex;      /* 横並び表示に切り替え */
+    gap: 20px;          /* ボタンの間隔を追加 */
+    justify-content: center; /* ボタンを中央寄せ */
+}
+
+.button-container button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff; /* ボタンの背景色を青に変更 */
+    color: #fff;
+    transition: background-color 0.3s, transform 0.2s;
+    margin: 0; /* 余分なマージンをリセット */
+}
+
+.button-container button:hover {
+    background-color: #0056b3; /* ホバー時の背景色を濃くする */
+    transform: scale(1.05);    /* ホバー時に少し拡大 */
+}
+
+/* ページタイトルのスタイル */
+.page-title {
+    font-family: 'Roboto Slab', serif;
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #333;
+    padding-bottom: 10px;
+    text-align: center;
+    font-weight: bold;
+    display: inline-block;
+    position: relative; /* 擬似要素の配置に必要 */
+}
+
+/* ページタイトルの擬似要素 */
+.page-title::after {
+    content: "";
+    display: block;
+    width: 1100px; /* 線の長さを調整 */
+    height: 2px;  /* 線の太さ */
+    background-color: #ddd; /* 線の色 */
+    margin-top: 5px; /* タイトルと線の間のスペース */
+    margin-left: 0; /* 左寄せ */
+}
+
+/* 左寄せクラス */
+.left-align {
+    text-align: left;
+    padding-left: 5.0em;
+}
+
+/* レスポンシブデザイン */
+@media (max-width: 768px) {
+    .wiki-content {
+        max-width: 90ch;  /* モバイルでは幅を広げる */
+        padding: 0 10px;  /* パディングを調整 */
+    }
+
+    body {
+        font-size: 14px; /* モバイルではフォントサイズを少し小さく */
+    }
+
+    header h1 {
+        font-size: 20px;
+    }
+
+    /* コンテンツ内のページタイトルのレスポンシブスタイル */
+    .page-title {
+        font-size: 24px;    /* モバイルでは少し小さめに */
+        margin-bottom: 15px;
+        padding-bottom: 8px;
+        text-align: center; /* 中央揃え */
+        max-width: 200px;   /* モバイル用に幅を調整 */
+    }
+
+    /* ゲームクリア画面のレスポンシブスタイル */
+    .game-clear p {
+        font-size: 16px; /* フォントサイズを少し小さく */
+    }
+
+    /* ボタンコンテナのレスポンシブスタイル */
+    .button-container {
+        margin-top: 15px; /* 上に余白を調整 */
+        flex-direction: column; /* 横並びがきつい場合は縦並びに */
+        gap: 10px;
+    }
+
+    .button-container button {
+        padding: 10px 20px; /* ボタンのパディングを調整 */
+        font-size: 14px;    /* ボタンのフォントサイズを調整 */
+    }
+}
+
+/* リンクのスタイル */
+a {
+    color: #0645ad;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* ボタンのスタイル（既に.btnクラスに含まれているため不要な場合は削除） */
+.btn, button {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn:hover, button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* その他のスタイル */
+.game-clear-page, .game-over-page, .home-page {
+    text-align: center;
+}
+
+.game-clear-page p, .game-over-page p, .home-page p {
+    margin: 20px 0;
+}
+
+footer {
+    text-align: center; /* コピーライトなどフッター内のテキストを中央揃え */
+}
