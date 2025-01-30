@@ -1,4 +1,5 @@
 # WikiGame
+<<<<<<< HEAD
 
 WikiGameは、Wikipediaのリンクを辿ってゴールを目指すゲームです！🎮  
 指定されたスタートページから、リンクをクリックしながらゴールページへ最短でたどり着こう！
@@ -23,3 +24,5 @@ git clone https://github.com/usatan-lab/WikiGame.git
 cd WikiGame
 pip install -r requirements.txt
 python main.py  # 実行
+=======
+>>>>>>> 8ab5295 (gunicornを追加)
