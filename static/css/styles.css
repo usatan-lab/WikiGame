@@ -240,6 +240,7 @@ header {
     padding-left: 5.0em;
 }
 
+
 /* レスポンシブデザイン */
 @media (max-width: 768px) {
     .wiki-content {
@@ -256,13 +257,23 @@ header {
     }
 
     /* コンテンツ内のページタイトルのレスポンシブスタイル */
+
     .page-title {
         font-size: 24px;    /* モバイルでは少し小さめに */
         margin-bottom: 15px;
         padding-bottom: 8px;
-        text-align: center; /* 中央揃え */
-        max-width: 200px;   /* モバイル用に幅を調整 */
+        text-align: left; /* 中央揃えから左揃えに変更 */
+        max-width: 90%;     /* モバイル用に幅を調整 */
+        display: block;     /* 左寄せに対応するためブロック表示に変更 */
     }
+}
+
+    /* ページタイトルの擬似要素のレスポンシブスタイル */
+    .page-title::after {
+        max-width: 300px; /* モバイルでは最大幅を縮小 */
+        margin-left: 0;    /* 左寄せ */
+    }
+}
 
     /* ゲームクリア画面のレスポンシブスタイル */
     .game-clear p {
@@ -276,9 +287,15 @@ header {
         gap: 10px;
     }
 
-    .button-container button {
+    .button-container .btn {
         padding: 10px 20px; /* ボタンのパディングを調整 */
         font-size: 14px;    /* ボタンのフォントサイズを調整 */
+    }
+
+    /* 全体の幅を広げる */
+    .container {
+        width: 160%; /* 幅をさらに広げる */
+        padding: 20px 15px; /* パディングを広げる */
     }
 }
 
@@ -291,25 +308,6 @@ a {
 a:hover {
     text-decoration: underline;
 }
-
-/* ボタンのスタイル（既に.btnクラスに含まれているため不要な場合は削除） */
-.btn, button {
-    padding: 10px 20px;
-    font-size: 16px;
-    margin: 10px;
-    cursor: pointer;
-    border: none;
-    border-radius: 5px;
-    background-color: #007bff;
-    color: #fff;
-    transition: background-color 0.3s, transform 0.2s;
-}
-
-.btn:hover, button:hover {
-    background-color: #0056b3;
-    transform: scale(1.05);
-}
-
 /* その他のスタイル */
 .game-clear-page, .game-over-page, .home-page {
     text-align: center;

@@ -206,25 +206,25 @@ app.add_url_rule('/gameover', view_func=GameOverView.as_view('game_over'))
 ###########################
 # Quick tests (basic)     #
 ###########################
-def run_tests():
-    print("Running tests...")
-    with app.test_client() as client:
-        # 1) Test the root (opening)
-        rv = client.get('/')
-        assert rv.status_code == 200, "Root / should return 200"
-        print("Test 1 passed: GET / => 200")
-
-        # 2) Test start_game (GET)
-        rv = client.get('/start_game')
-        assert rv.status_code in (200, 302), "start_game should redirect or succeed"
-        print("Test 2 passed: GET /start_game => OK (Redirect or 200)")
-
-        # 3) Test reset
-        rv = client.get('/reset')
-        assert rv.status_code in (200, 302), "reset should redirect"
-        print("Test 3 passed: GET /reset => OK (Redirect)")
-
-    print("All tests completed!")
+# def run_tests():
+#     print("Running tests...")
+#     with app.test_client() as client:
+#         # 1) Test the root (opening)
+#         rv = client.get('/')
+#         assert rv.status_code == 200, "Root / should return 200"
+#         print("Test 1 passed: GET / => 200")
+#
+#         # 2) Test start_game (GET)
+#         rv = client.get('/start_game')
+#         assert rv.status_code in (200, 302), "start_game should redirect or succeed"
+#         print("Test 2 passed: GET /start_game => OK (Redirect or 200)")
+#
+#         # 3) Test reset
+#         rv = client.get('/reset')
+#         assert rv.status_code in (200, 302), "reset should redirect"
+#         print("Test 3 passed: GET /reset => OK (Redirect)")
+#
+#     print("All tests completed!")
 
 if __name__ == '__main__':
     # run_tests()  # 必要があればテスト
