@@ -5,7 +5,7 @@ from bs4 import BeautifulSoup
 from flask.views import MethodView
 import logging
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder='static')
 
 # ログの設定
 logging.basicConfig(level=logging.DEBUG)
@@ -230,4 +230,3 @@ if __name__ == '__main__':
     # run_tests()  # 必要があればテスト
     # debug=False, use_reloader=False で _multiprocessing エラーを回避
     app.run(debug=False, use_reloader=False)
-
