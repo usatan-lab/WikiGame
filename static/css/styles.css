@@ -60,9 +60,8 @@ header {
 /* ボタンのスタイル */
 .btn {
     display: inline-block;
-    padding: 8px 16px;
+    padding: 10px 20px; /* パディングを統一 */
     font-size: 16px;
-    margin: 0;
     cursor: pointer;
     border: none;
     border-radius: 5px;
@@ -70,11 +69,53 @@ header {
     color: #fff;
     text-decoration: none;
     transition: background-color 0.3s, transform 0.2s;
+    margin: 0; /* 余分なマージンをリセット */
+    max-width: 200px; /* 最大幅を設定 */
+    width: auto; /* 幅を自動調整 */
+    text-align: center; /* テキストを中央揃え */
 }
 
 .btn:hover {
     background-color: #0056b3;
     transform: scale(1.05);
+}
+
+/* ボタンコンテナのスタイル */
+.button-container {
+    display: flex;                  /* Flexboxを使用 */
+    justify-content: center;        /* ボタンを中央揃え */
+    align-items: center;            /* ボタンの高さを揃える */
+    gap: 20px;                      /* ボタン間のスペース */
+    flex-wrap: wrap;                /* ボタンがコンテナを超える場合に折り返す */
+    margin-top: 20px;               /* 上に余白を追加 */
+}
+
+/* ボタンのスタイル（.btn クラスのみ使用） */
+.btn {
+    padding: 10px 20px;             /* パディングを統一 */
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.2s;
+    margin: 0;                       /* 余分なマージンをリセット */
+    max-width: 200px;                /* 最大幅を設定 */
+    width: auto;                     /* 幅を自動調整 */
+    text-align: center;              /* テキストを中央揃え */
+}
+
+.btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* 特定のボタンに対する追加スタイル */
+.level-select-btn {
+    max-width: 200px;                /* 必要に応じて調整 */
+    width: 150px;                     /* 固定幅に設定 */
 }
 
 /* コンテンツ領域のスタイル */
@@ -211,27 +252,17 @@ header {
 }
 
 /* ページタイトルのスタイル */
-.page-title {
-    font-family: 'Roboto Slab', serif;
-    font-size: 32px;
-    margin-bottom: 20px;
-    color: #333;
-    padding-bottom: 10px;
-    text-align: center;
-    font-weight: bold;
-    display: inline-block;
-    position: relative; /* 擬似要素の配置に必要 */
-}
-
-/* ページタイトルの擬似要素 */
-.page-title::after {
-    content: "";
-    display: block;
-    width: 1100px; /* 線の長さを調整 */
-    height: 2px;  /* 線の太さ */
-    background-color: #ddd; /* 線の色 */
-    margin-top: 5px; /* タイトルと線の間のスペース */
-    margin-left: 0; /* 左寄せ */
+..page-title {
+    font-family: 'Roboto Slab', serif; /* Google FontsのRoboto Slabを適用 */
+    font-size: 32px;        /* 大きなフォントサイズ */
+    margin-bottom: 20px;    /* 下に余白を追加 */
+    color: #333;            /* テキストカラー */
+    padding-bottom: 10px;   /* タイトルの下にパディングを追加 */
+    text-align: center;     /* 中央揃えに変更 */
+    font-weight: bold;      /* 太字に設定 */
+    display: inline-block;  /* コンテンツの幅に合わせてブロック表示 */
+    border-bottom: 2px solid #ddd; /* タイトルの下に線を追加 */
+    max-width: 1300px;       /* 線の長さを制限 */
 }
 
 /* 左寄せクラス */
@@ -272,6 +303,7 @@ header {
     .page-title::after {
         max-width: 300px; /* モバイルでは最大幅を縮小 */
         margin-left: 0;    /* 左寄せ */
+        width: 100%;
     }
 }
 
@@ -294,7 +326,7 @@ header {
 
     /* 全体の幅を広げる */
     .container {
-        width: 100%; /* 幅をさらに広げる */
+        width: 160%; /* 幅をさらに広げる */
         padding: 20px 15px; /* パディングを広げる */
     }
 }

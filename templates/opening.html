@@ -20,8 +20,10 @@
     <br>
     <div class="button-container">
         <!-- 簡易版: GETパラメータを付けて難易度を指定 -->
-        <button onclick="location.href='{{ url_for('start_game') }}?difficulty=easy'">Easyモード</button>
-        <button onclick="location.href='{{ url_for('start_game') }}?difficulty=hard'">Hardモード</button>
+        <button class="btn level-select-btn" onclick="location.href='{{ url_for('start_game') }}?difficulty=easy'">Easyモード</button>
+        <button class="btn level-select-btn" onclick="location.href='{{ url_for('start_game') }}?difficulty=hard'">Hardモード</button>
+
+
     </div>
 </div>
 
