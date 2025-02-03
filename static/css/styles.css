@@ -224,6 +224,10 @@ header {
     transform: scale(1.05);    /* ホバー時に少し拡大 */
 }
 
+.game-clear h1 {
+    text-align: center;
+}
+
 /* ボタンコンテナのスタイルを追加 */
 .button-container {
     text-align: center; /* ボタンを中央揃えに */
@@ -302,7 +306,7 @@ header {
     /* ページタイトルの擬似要素のレスポンシブスタイル */
     .page-title::after {
         max-width: 300px; /* モバイルでは最大幅を縮小 */
-        margin-left: 0;    /* 左寄せ */
+        text-align: center;
         width: 100%;
     }
 }

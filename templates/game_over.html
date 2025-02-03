@@ -4,11 +4,10 @@
 {% block title %}Wiki Game - ゲームオーバー{% endblock %}
 
 {% block content %}
-<div class="container">
+<div class="container game-over-page">
     <h1>GAME OVER!!!</h1>
     <div class="game-clear">
         <p>諦めてはいけない</p>
-        <!-- ボタンを中央揃えにするためのラッパーを追加 -->
         <div class="button-container">
             <button onclick="location.href='{{ url_for('opening') }}'">もう一度</button>
         </div>

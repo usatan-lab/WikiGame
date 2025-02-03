@@ -17,10 +17,13 @@
 </div>
 <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1/dist/confetti.browser.min.js"></script>
 <script>
+      // 画面幅に応じてエフェクトの開始位置を調整
+  var originY = window.innerWidth < 768 ? 0.4 : 0.6;
+
   confetti({
     particleCount: 100,
     spread: 70,
-    origin: { y: 0.6 }
+    origin: { y: originY }
   });
 </script>
 {% endblock %}
