@@ -26,3 +26,6 @@ pip install -r requirements.txt
 python main.py  # 実行
 =======
 >>>>>>> 8ab5295 (gunicornを追加)
+
+##**サンプル**
+https://wikigame-3w3r.onrender.com
