@@ -1,4 +1,7 @@
 # WikiGame
+
+##**サンプル**
+https://wikigame-3w3r.onrender.com
 <<<<<<< HEAD
 
 WikiGameは、Wikipediaのリンクを辿ってゴールを目指すゲームです！🎮  
@@ -27,5 +30,3 @@ python main.py  # 実行
 =======
 >>>>>>> 8ab5295 (gunicornを追加)
 
-##**サンプル**
-https://wikigame-3w3r.onrender.com
